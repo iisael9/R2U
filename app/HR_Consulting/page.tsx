@@ -32,7 +32,7 @@ export default function HRConsultingPage() {
             Companies face pressure to achieve more with less while managing human capital strategically and
             comprehensively. We provide guidance and best practices to address all aspects of HR for your organization.
             Whether you need to evaluate risks, improve efficiencies, manage change, or conduct a cultural assessment, we
-            are here to help you achieve your organization's goals. We offer a wide range of HR services, including:
+            are here to help you achieve your organization&apos;s goals. We offer a wide range of HR services, including:
           </p>
           <ul className="list-disc pl-6 text-base space-y-2">
             <li>HR Compliance Assessments</li>
