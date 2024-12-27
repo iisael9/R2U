@@ -20,11 +20,12 @@ const monoFont = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AriaDocs - Template",
-  metadataBase: new URL("https://ariadocs.vercel.app/"),
+  title: "R2U Consulting - HR & Bookkeeping Experts",
+  metadataBase: new URL("https://r2u-isael-lazcanos-projects.vercel.app/"),
   description:
-    "This comprehensive documentation template, crafted with Next.js and available as open-source, delivers a sleek and responsive design, tailored to meet all your project documentation requirements.",
+    "R2U Consulting provides top-notch HR consulting, bookkeeping, and business advisory services to help businesses streamline operations and achieve their goals. Your trusted partner for professional business solutions.",
 };
+
 
 export default function RootLayout({
   children,
