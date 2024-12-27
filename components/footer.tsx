@@ -30,7 +30,7 @@ export function Footer() {
         {/* Right Section */}
         <div className="flex flex-col items-center sm:items-end text-center sm:text-right">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} R2U Consulting. All Rights Reserved.
+            &copy; {new Date().getFullYear()} R2U Consulting. <br />All Rights Reserved.
           </p>
         </div>
       </div>
