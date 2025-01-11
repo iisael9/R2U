@@ -13,7 +13,7 @@ const items: Item[] = [
   { title: "Custom financial reports", description: "Generate customized financial reports tailored to your needs." },
   { title: "Invoicing or billing", description: "Create and manage invoices or bills efficiently." },
   { title: "Correct errors and adjust entries", description: "Fix errors and make adjustments to financial entries." },
-  { title: "Sales tax reconciliation and filing", description: "Reconcile and file sales tax accurately." },
+  // { title: "Sales tax reconciliation and filing", description: "Reconcile and file sales tax accurately." },
   { title: "Payroll live/after the fact", description: "Process payroll in real-time or retrospectively." },
   { title: "Budgeting and forecasting", description: "Develop accurate budgets and financial forecasts." },
   { title: "Year-end review/adjustments", description: "Conduct year-end reviews and make necessary adjustments." },
@@ -23,7 +23,7 @@ const items: Item[] = [
   { title: "Bank reconciliation", description: "Reconcile bank statements with financial records." },
   { title: "Credit card reconciliation", description: "Match credit card transactions with records." },
   { title: "AP/AR tracking", description: "Track accounts payable and accounts receivable effectively." },
-  { title: "Match tax returns", description: "Ensure accurate matching of tax returns." },
+  // { title: "Match tax returns", description: "Ensure accurate matching of tax returns." },
   { title: "Financial review & analysis", description: "Perform in-depth reviews and analyses of financial data." },
   { title: "Match cash transaction entries", description: "Reconcile and match all cash transactions." },
   { title: "Profit and loss statement", description: "Prepare accurate profit and loss statements." },
@@ -31,9 +31,9 @@ const items: Item[] = [
   { title: "Cash flow statement", description: "Track and monitor cash flow across your business." },
   { title: "Financial reports (as sought by CPA)", description: "Prepare financial reports required by CPAs." },
   { title: "Vendor payment scheduling", description: "Schedule and manage vendor payments." },
-  { title: "1099 report preparation", description: "Prepare 1099 reports accurately and on time." },
-  { title: "1099 E filing", description: "File 1099 forms electronically with ease." },
-  { title: "HST calculation and filing", description: "Accurately calculate and file HST." },
+  // { title: "1099 report preparation", description: "Prepare 1099 reports accurately and on time." },
+  // { title: "1099 E filing", description: "File 1099 forms electronically with ease." },
+  // { title: "HST calculation and filing", description: "Accurately calculate and file HST." },
 ];
 
 export default function ServicesPage() {
@@ -70,8 +70,7 @@ export default function ServicesPage() {
       </h1>
 
       <p className="text-base sm:text-lg text-muted-foreground">
-        We cover all aspects of bookkeeping and accounting services for CPAs, businesses, and accounting firms. We
-        have been offering remote bookkeeping services. We have extensive expertise across multiple industries and business types.
+        We cover a wide variety of bookkeeping and accounting services for small businesses, and entrepreneurs.
       </p>
     </div>
 

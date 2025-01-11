@@ -11,13 +11,13 @@ export function Footer() {
         <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
           <h4 className="text-lg font-semibold">Contact Information</h4>
           <p className="text-muted-foreground text-sm">
-            Ramona Ramirez <br />
+            {/* Ramona Ramirez <br /> */}
             Montebello, CA 90640 <br />
-            <Link href="tel:9515335344" className="text-purple-500 hover:underline">
-              (951) 533-5344
+            <Link href="tel:9512018353" className="text-purple-500 hover:underline">
+              (951) 201-8353
             </Link> <br />
-            <Link href="mailto:ramona.ramirez@example.com" className="text-purple-500 hover:underline">
-              ramona.ramirez@example.com
+            <Link href="mailto:ramonanoel27@gmail.com" className="text-purple-500 hover:underline">
+            ramonanoel27@gmail.com
             </Link>
           </p>
         </div>

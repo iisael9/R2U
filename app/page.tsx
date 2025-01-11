@@ -18,12 +18,12 @@ export default function Home() {
       {/* Main Content */}
       <div className="sm:min-h-[85.5vh] min-h-[85vh] flex flex-col items-center justify-center">
         <h1 className="text-4xl font-semi-bold mb-4 sm:text-7xl lg:text-8xl">
-          <span className="text-purple-500">Reliable</span> outsourcing services
+          <span className="text-purple-500">Reliable</span> Outsourcing Services
         </h1>
 
         <p className="mb-8 sm:text-lg max-w-[800px] text-muted-foreground">
-          We provide
-          <span className="text-purple-500"> Industry Leading </span>
+          We specialize in 
+          <span className="text-purple-500"> small businesses </span>
           consulting services
         </p>
 
@@ -66,7 +66,7 @@ export default function Home() {
           <MdVerified className="text-purple-500 text-4xl mb-4" />
           <h3 className="text-lg font-bold mb-2">Trusted Expertise</h3>
           <p className="text-sm text-muted-foreground">
-            Our team is backed by years of proven experience and client trust.
+            Our team is backed by experience and client trust.
           </p>
         </div>
         <div className="flex flex-col items-center">

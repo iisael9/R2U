@@ -8,8 +8,7 @@ export default function HRConsultingPage() {
           </h2>
           <p className="text-lg text-muted-foreground mb-6">
             Outsourcing HR frees up your time to focus on core functions. Our team provides customized solutions to meet
-            your unique needs. We offer exceptional customer service, cost-effective HR services, and a unique combination
-            of national resources and personal service. Key services include:
+            your unique needs. We offer exceptional customer service, cost-effective HR services, and a unique and personal service. Key services include:
           </p>
           <ul className="list-disc pl-6 text-base space-y-2">
             <li>Employee On-Boarding</li>
@@ -29,8 +28,7 @@ export default function HRConsultingPage() {
             HR Consulting Services
           </h2>
           <p className="text-lg text-muted-foreground mb-6">
-            Companies face pressure to achieve more with less while managing human capital strategically and
-            comprehensively. We provide guidance and best practices to address all aspects of HR for your organization.
+            Companies face pressure to achieve more with less while trying to strategically manage their workforce. We provide guidance and best practices to address all aspects of HR for your organization.
             Whether you need to evaluate risks, improve efficiencies, manage change, or conduct a cultural assessment, we
             are here to help you achieve your organization&apos;s goals. We offer a wide range of HR services, including:
           </p>
@@ -38,11 +36,11 @@ export default function HRConsultingPage() {
             <li>HR Compliance Assessments</li>
             <li>HR Process Review and Improvements</li>
             <li>Employee Engagement Surveys</li>
-            <li>Human Capital Due Diligence for Mergers and Acquisitions</li>
+            {/* <li>Human Capital Due Diligence for Mergers and Acquisitions</li> */}
             <li>Start-up Company HR Set Up</li>
             <li>Employee Handbooks</li>
           </ul>
-          <p className="text-lg text-muted-foreground mt-6">
+          {/* <p className="text-lg text-muted-foreground mt-6">
             Our national expertise enhances and supports our locally-delivered{" "}
             <a href="#" className="text-purple-500 underline">
               benefits consulting
@@ -55,7 +53,7 @@ export default function HRConsultingPage() {
             <a href="#" className="text-purple-500 underline">
               HRIS technology
             </a>{" "}.
-          </p>
+          </p> */}
         </section>
   
         {/* Call-to-Action Button */}
