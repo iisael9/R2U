@@ -43,13 +43,13 @@ export default function ContactPage() {
               Call Us
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
-              951-533-5344
+            (951) 201-8353
             </p>
             <p className="font-semibold text-gray-800 dark:text-gray-100">
               Phone Hours:
             </p>
             <p className="text-gray-600 dark:text-gray-400">
-              Monday–Friday: 6:00 am–4:00 pm PT
+              Monday–Friday: 8:00 am–4:00 pm PT
             </p>
             <p className="text-gray-600 dark:text-gray-400">
               Saturday & Sunday: Closed
@@ -68,10 +68,10 @@ export default function ContactPage() {
               Submit an email, and we will get back to you as soon as possible.
             </p>
             <a
-              href="mailto:ramona.ramirez@example.com"
+              href="mailto:ramonanoel27@gmail.com"
               className="text-purple-500 hover:underline dark:text-purple-400 text-lg"
             >
-              ramona.ramirez@example.com
+              ramonanoel27@gmail.com
             </a>
             <p className="font-semibold text-gray-800 dark:text-gray-100 mt-6">
               Email Hours:
@@ -79,9 +79,9 @@ export default function ContactPage() {
             <p className="text-gray-600 dark:text-gray-400">
               Monday–Friday: 6:00 am–4:00 pm PT
             </p>
-            <p className="text-gray-600 dark:text-gray-400">
+            {/* <p className="text-gray-600 dark:text-gray-400">
               Saturday & Sunday: 6:00 am–4:00 pm PT
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
