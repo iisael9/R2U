@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 
 export const ImagesSlider = ({
   images,
@@ -21,27 +21,10 @@ export const ImagesSlider = ({
   direction?: "up" | "down";
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [loading, setLoading] = useState(false);
   const [loadedImages, setLoadedImages] = useState<string[]>([]);
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex + 1 === images.length ? 0 : prevIndex + 1
-    );
-  };
-
-  const handlePrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
-
-  useEffect(() => {
-    loadImages();
-  }, []);
-
-  const loadImages = () => {
-    setLoading(true);
+  // Load images using useCallback to avoid recreating the function unnecessarily
+  const loadImages = useCallback(() => {
     const loadPromises = images.map((image) => {
       return new Promise((resolve, reject) => {
         const img = new Image();
@@ -54,10 +37,30 @@ export const ImagesSlider = ({
     Promise.all(loadPromises)
       .then((loadedImages) => {
         setLoadedImages(loadedImages as string[]);
-        setLoading(false);
       })
       .catch((error) => console.error("Failed to load images", error));
-  };
+  }, [images]);
+
+  // Move to the next image
+  const handleNext = useCallback(() => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex + 1 === images.length ? 0 : prevIndex + 1
+    );
+  }, [images.length]);
+
+  // Move to the previous image
+  const handlePrevious = useCallback(() => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
+    );
+  }, [images.length]);
+
+  // Load images on component mount
+  useEffect(() => {
+    loadImages();
+  }, [loadImages]);
+
+  // Keyboard navigation and autoplay
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "ArrowRight") {
@@ -69,19 +72,18 @@ export const ImagesSlider = ({
 
     window.addEventListener("keydown", handleKeyDown);
 
-    // autoplay
-    let interval: any;
+    let interval: NodeJS.Timeout;
     if (autoplay) {
       interval = setInterval(() => {
         handleNext();
-      }, 8000);
+      }, 8000); // Set autoplay interval to 8000ms
     }
 
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
       clearInterval(interval);
     };
-  }, []);
+  }, [autoplay, handleNext, handlePrevious]);
 
   const slideVariants = {
     initial: {
@@ -114,8 +116,6 @@ export const ImagesSlider = ({
     },
   };
 
-  const areImagesLoaded = loadedImages.length > 0;
-
   return (
     <div
       className={cn(
@@ -126,14 +126,14 @@ export const ImagesSlider = ({
         perspective: "1000px",
       }}
     >
-      {areImagesLoaded && children}
-      {areImagesLoaded && overlay && (
+      {loadedImages.length > 0 && children}
+      {loadedImages.length > 0 && overlay && (
         <div
           className={cn("absolute inset-0 bg-black/60 z-40", overlayClassName)}
         />
       )}
 
-      {areImagesLoaded && (
+      {loadedImages.length > 0 && (
         <AnimatePresence>
           <motion.img
             key={currentIndex}
