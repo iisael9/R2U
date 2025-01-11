@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
-import { MapPin, Phone, Linkedin, Facebook } from "lucide-react";
+import { MapPin, Phone, Linkedin } from "lucide-react";
 import Image from "next/image";
 
 export function Footer() {
