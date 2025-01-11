@@ -56,7 +56,7 @@ export function Logo() {
         alt="R2U Logo"
         width={80} // Adjust size as needed
         height={80} // Adjust size as needed
-        className="dark:invert" // Invert only the logo color in dark mode
+        // className="dark:invert" // Invert only the logo color in dark mode
       />
       <h2 className="font-sans text-base text-purple-500 hover:text-purple-600 transition">R2U Consulting</h2>
     </Link>
