@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
-import { MapPin, Phone, Linkedin } from "lucide-react";
+import { MapPin, Phone, Linkedin, Facebook } from "lucide-react";
 import Image from "next/image";
 
 export function Footer() {
@@ -11,13 +11,12 @@ export function Footer() {
         <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
           <h4 className="text-lg font-semibold">Contact Information</h4>
           <p className="text-muted-foreground text-sm">
-            {/* Ramona Ramirez <br /> */}
             Montebello, CA 90640 <br />
             <Link href="tel:9512018353" className="text-purple-500 hover:underline">
               (951) 201-8353
             </Link> <br />
             <Link href="mailto:ramonanoel27@gmail.com" className="text-purple-500 hover:underline">
-            ramonanoel27@gmail.com
+              ramonanoel27@gmail.com
             </Link>
           </p>
         </div>
@@ -50,6 +49,22 @@ export function FooterButtons() {
         <Linkedin className="h-4 w-4 mr-2 text-blue-600 fill-current" />
         LinkedIn
       </Link>
+      {/* Facebook Section */}
+      <Link
+        href="https://www.facebook.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={buttonVariants({ variant: "outline", size: "sm" })}
+      >
+        <Image
+          src="/facebook.svg"
+          alt="Facebook"
+          width={16}
+          height={16}
+          className="mr-2"
+        />
+        Facebook
+      </Link>
       <Link
         href="https://www.instagram.com/"
         target="_blank"
@@ -81,6 +96,7 @@ export function FooterButtons() {
         <Phone className="h-4 w-4 mr-2 text-purple-600 fill-current" />
         Call Us
       </Link>
+      
     </>
   );
 }

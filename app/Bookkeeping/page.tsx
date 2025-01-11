@@ -13,7 +13,6 @@ const items: Item[] = [
   { title: "Custom financial reports", description: "Generate customized financial reports tailored to your needs." },
   { title: "Invoicing or billing", description: "Create and manage invoices or bills efficiently." },
   { title: "Correct errors and adjust entries", description: "Fix errors and make adjustments to financial entries." },
-  // { title: "Sales tax reconciliation and filing", description: "Reconcile and file sales tax accurately." },
   { title: "Payroll live/after the fact", description: "Process payroll in real-time or retrospectively." },
   { title: "Budgeting and forecasting", description: "Develop accurate budgets and financial forecasts." },
   { title: "Year-end review/adjustments", description: "Conduct year-end reviews and make necessary adjustments." },
@@ -23,7 +22,6 @@ const items: Item[] = [
   { title: "Bank reconciliation", description: "Reconcile bank statements with financial records." },
   { title: "Credit card reconciliation", description: "Match credit card transactions with records." },
   { title: "AP/AR tracking", description: "Track accounts payable and accounts receivable effectively." },
-  // { title: "Match tax returns", description: "Ensure accurate matching of tax returns." },
   { title: "Financial review & analysis", description: "Perform in-depth reviews and analyses of financial data." },
   { title: "Match cash transaction entries", description: "Reconcile and match all cash transactions." },
   { title: "Profit and loss statement", description: "Prepare accurate profit and loss statements." },
@@ -31,9 +29,6 @@ const items: Item[] = [
   { title: "Cash flow statement", description: "Track and monitor cash flow across your business." },
   { title: "Financial reports (as sought by CPA)", description: "Prepare financial reports required by CPAs." },
   { title: "Vendor payment scheduling", description: "Schedule and manage vendor payments." },
-  // { title: "1099 report preparation", description: "Prepare 1099 reports accurately and on time." },
-  // { title: "1099 E filing", description: "File 1099 forms electronically with ease." },
-  // { title: "HST calculation and filing", description: "Accurately calculate and file HST." },
 ];
 
 export default function ServicesPage() {
@@ -52,43 +47,41 @@ export default function ServicesPage() {
 
   return (
     <div className="container mx-auto py-12 px-4">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-    {/* Left Section: Title and Description */}
-    <div className="flex flex-col max-w-full">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
-        <span className="flex items-center whitespace-nowrap">
-          <Image
-            src="/qb.svg"
-            alt="QuickBooks Logo"
-            width={50} // Adjust logo size dynamically
-            height={50}
-            className="mr-4"
-          />
-          Highly <span className="ml-2 text-purple-500">reliable</span>
-        </span>
-        <span className="block">bookkeeping outsourcing service</span>
-      </h1>
-
-      <p className="text-base sm:text-lg text-muted-foreground">
-        We cover a wide variety of bookkeeping and accounting services for small businesses, and entrepreneurs.
-      </p>
-    </div>
-
-    {/* Right Section: List of Services */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4">
-      {items.map((item, index) => (
-        <div
-          key={index}
-          className="flex items-start gap-3 cursor-pointer"
-          onClick={() => openModal(item)}
-        >
-          <span className="text-purple-500 text-xl">✔</span>
-          <span className="text-sm sm:text-base">{item.title}</span>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Left Section: Title and Description */}
+        <div className="flex flex-col max-w-full">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+            <span className="flex items-center whitespace-nowrap">
+              <Image
+                src="/qb.svg"
+                alt="QuickBooks Logo"
+                width={50} // Adjust logo size dynamically
+                height={50}
+                className="mr-4"
+              />
+              Highly <span className="ml-2 text-purple-500">reliable</span>
+            </span>
+            <span className="block">bookkeeping outsourcing service</span>
+          </h1>
+          <p className="text-base sm:text-lg text-muted-foreground">
+            We cover a wide variety of bookkeeping and accounting services for small businesses, and entrepreneurs.
+          </p>
         </div>
-      ))}
-    </div>
-  </div>
 
+        {/* Right Section: List of Services */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4">
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-start gap-3 cursor-pointer"
+              onClick={() => openModal(item)}
+            >
+              <span className="text-purple-500 text-xl">✔</span>
+              <span className="text-sm sm:text-base">{item.title}</span>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Modal */}
       {isModalOpen && selectedItem && (
@@ -106,6 +99,16 @@ export default function ServicesPage() {
           </div>
         </div>
       )}
+
+      {/* Call-to-Action Button */}
+      <div className="flex justify-center mt-12">
+        <a
+          href="/contact"
+          className="bg-purple-500 text-white text-lg font-bold py-3 px-6 rounded-lg hover:bg-purple-600 transition"
+        >
+          Connect with a Consultant
+        </a>
+      </div>
     </div>
   );
 }

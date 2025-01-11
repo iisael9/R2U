@@ -36,7 +36,7 @@ export function Navbar() {
         <div className="flex items-center gap-3 ml-auto">
           <Link
             href="/contact"
-            className={buttonVariants({ variant: "ghost", size: "sm" })}
+            className={buttonVariants({ variant: "ghost", size: "sm", className: "text-purple-500 hover:text-purple-600"   })}
           >
             Contact Us
           </Link>
@@ -50,15 +50,15 @@ export function Navbar() {
 
 export function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-2.5">
+    <Link href="/" className="flex items-center gap-2.5 text-purple">
       <Image
-        src="/r2uIcon.svg"
+        src="/r2uLogo.svg"
         alt="R2U Logo"
-        width={56} // Adjust size as needed
-        height={48} // Adjust size as needed
+        width={80} // Adjust size as needed
+        height={80} // Adjust size as needed
         className="dark:invert" // Invert only the logo color in dark mode
       />
-      <h2 className="font-sans text-base">R2U Consulting</h2>
+      <h2 className="font-sans text-base text-purple-500 hover:text-purple-600 transition">R2U Consulting</h2>
     </Link>
   );
 }
