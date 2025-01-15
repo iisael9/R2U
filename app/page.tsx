@@ -33,7 +33,7 @@ export default function Home() {
           {/* Slider Content */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-50">
             <h1 className="text-4xl font-semi-bold mb-4 sm:text-7xl lg:text-8xl">
-              <span className="text-purple-500 text-bold">Reliable</span> Outsourcing Services
+              <span className="text-purple-500 text-bold">Reliable</span> Consulting Services
             </h1>
             <p className="mb-8 sm:text-lg max-w-[800px]">
               We specialize in
