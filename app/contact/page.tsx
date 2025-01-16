@@ -3,7 +3,13 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-900 py-20 px-4">
+    <div className="relative min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-900 py-20 px-4">
+      {/* Global Background */}
+      <div className="absolute inset-0 -z-10 h-full w-full dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2]">
+        {/* Radial gradient */}
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      </div>
+
       <h1 className="text-4xl font-bold mb-16 text-gray-800 dark:text-gray-100">
         Contact Us
       </h1>
@@ -43,7 +49,7 @@ export default function ContactPage() {
               Call Us
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
-            (951) 201-8353
+              (951) 201-8353
             </p>
             <p className="font-semibold text-gray-800 dark:text-gray-100">
               Phone Hours:
@@ -79,9 +85,6 @@ export default function ContactPage() {
             <p className="text-gray-600 dark:text-gray-400">
               Monday–Friday: 6:00 am–4:00 pm PT
             </p>
-            {/* <p className="text-gray-600 dark:text-gray-400">
-              Saturday & Sunday: 6:00 am–4:00 pm PT
-            </p> */}
           </div>
         </div>
       </div>

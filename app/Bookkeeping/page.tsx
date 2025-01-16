@@ -46,72 +46,78 @@ export default function ServicesPage() {
   };
 
   return (
-    <div className="container mx-auto py-12 px-4">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-    {/* Left Section: Title and Description */}
-    <div className="flex flex-col max-w-full">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
-        <span className="flex items-center whitespace-nowrap">
-          <Image
-            src="/qb.svg"
-            alt="QuickBooks Logo"
-            width={50} // Adjust logo size dynamically
-            height={50}
-            className="mr-4"
-          />
-          Highly <span className="ml-2 text-purple-500">reliable</span>
-        </span>
-        <span className="block">bookkeeping outsourcing service</span>
-      </h1>
-      <p className="text-base sm:text-lg text-muted-foreground mb-4">
-        We cover a wide variety of bookkeeping and accounting services for small businesses, and entrepreneurs.
-      </p>
-
-      {/* Call-to-Action Button */}
-      <div className="mt-4 md:mt-6">
-        <a
-          href="/contact"
-          className="bg-purple-500 text-white text-sm sm:text-lg font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg hover:bg-purple-600 transition w-full sm:w-auto text-center"
-        >
-          Connect with a Consultant
-        </a>
+    <div className="relative">
+      {/* Global Background */}
+      <div className="absolute inset-0 -z-10 h-full w-full dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2]">
+        {/* Radial gradient */}
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       </div>
-    </div>
 
-    {/* Right Section: List of Services */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4">
-      {items.map((item, index) => (
-        <div
-          key={index}
-          className="flex items-start gap-3 cursor-pointer"
-          onClick={() => openModal(item)}
-        >
-          <span className="text-purple-500 text-xl">✔</span>
-          <span className="text-sm sm:text-base">{item.title}</span>
+      {/* Content */}
+      <div className="container mx-auto py-12 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Left Section: Title and Description */}
+          <div className="flex flex-col max-w-full">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+              <span className="flex items-center whitespace-nowrap">
+                <Image
+                  src="/qb.svg"
+                  alt="QuickBooks Logo"
+                  width={50}
+                  height={50}
+                  className="mr-4"
+                />
+                Highly <span className="ml-2 text-purple-500">reliable</span>
+              </span>
+              <span className="block">bookkeeping outsourcing service</span>
+            </h1>
+            <p className="text-base sm:text-lg text-muted-foreground mb-4">
+              We cover a wide variety of bookkeeping and accounting services for small businesses, and entrepreneurs.
+            </p>
+
+            {/* Call-to-Action Button */}
+            <div className="mt-4 md:mt-6">
+              <a
+                href="/contact"
+                className="bg-purple-500 text-white text-sm sm:text-lg font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg hover:bg-purple-600 transition w-full sm:w-auto text-center"
+              >
+                Connect with a Consultant
+              </a>
+            </div>
+          </div>
+
+          {/* Right Section: List of Services */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4">
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-3 cursor-pointer"
+                onClick={() => openModal(item)}
+              >
+                <span className="text-purple-500 text-xl">✔</span>
+                <span className="text-sm sm:text-base">{item.title}</span>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
 
-  {/* Modal */}
-  {isModalOpen && selectedItem && (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-background w-full max-w-md p-6 rounded-lg shadow-lg relative">
-        <button
-          className="absolute top-4 right-4 text-muted-foreground hover:text-foreground text-2xl"
-          onClick={closeModal}
-        >
-          &times;
-        </button>
-        <h2 className="text-xl font-bold mb-4 text-foreground">{selectedItem.title}</h2>
-        <hr className="mb-4 border-muted-foreground" />
-        <p className="text-gray-700 dark:text-muted-foreground">{selectedItem.description}</p>
+        {/* Modal */}
+        {isModalOpen && selectedItem && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+            <div className="bg-background w-full max-w-md p-6 rounded-lg shadow-lg relative">
+              <button
+                className="absolute top-4 right-4 text-muted-foreground hover:text-foreground text-2xl"
+                onClick={closeModal}
+              >
+                &times;
+              </button>
+              <h2 className="text-xl font-bold mb-4 text-foreground">{selectedItem.title}</h2>
+              <hr className="mb-4 border-muted-foreground" />
+              <p className="text-gray-700 dark:text-muted-foreground">{selectedItem.description}</p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
-  )}
-</div>
-
-
-
   );
 }
