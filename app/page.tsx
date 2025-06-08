@@ -1,12 +1,20 @@
-// import { buttonVariants } from "@/components/ui/button";
+export const metadata = {
+  title: 'Reliable Consulting Services | R2U Consulting',
+  description:
+    'R2U Consulting specializes in reliable HR and bookkeeping services for small businesses. Schedule your free consultation today!',
+  metadataBase: new URL('https://your-domain.com'),
+  robots: {
+    index: true,
+    follow: true,
+  },
+};// import { buttonVariants } from "@/components/ui/button";
+
 import Link from "next/link";
 import Image from "next/image";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { MdVerified, MdOutlineSupportAgent } from "react-icons/md";
 import { HiOutlineLightningBolt } from "react-icons/hi";
 import { ImagesSlider } from "@/components/ui/images-slider";
-
-<meta name="google-site-verification" content="z6iySBfcG1-sxBzG_syJqQaF0x2dsh60w9_Y-eqTkCo" />
 
 export default function Home() {
   return (
