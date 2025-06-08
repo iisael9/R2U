@@ -2,7 +2,7 @@ export const metadata = {
   title: 'Reliable Consulting Services | R2U Consulting',
   description:
     'R2U Consulting specializes in reliable HR and bookkeeping services for small businesses. Schedule your free consultation today!',
-  metadataBase: new URL('https://your-domain.com'),
+  metadataBase: new URL('https://www.r2u-consulting.com/'),
   robots: {
     index: true,
     follow: true,
