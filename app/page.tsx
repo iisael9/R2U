@@ -6,6 +6,8 @@ import { MdVerified, MdOutlineSupportAgent } from "react-icons/md";
 import { HiOutlineLightningBolt } from "react-icons/hi";
 import { ImagesSlider } from "@/components/ui/images-slider";
 
+<meta name="google-site-verification" content="z6iySBfcG1-sxBzG_syJqQaF0x2dsh60w9_Y-eqTkCo" />
+
 export default function Home() {
   return (
     <div className="relative flex flex-col items-center justify-center text-center px-2 sm:py-8 py-12">
