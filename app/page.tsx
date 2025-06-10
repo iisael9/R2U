@@ -62,7 +62,7 @@ export default function Home() {
 
             {/* Subtext + Buttons */}
             <div className="absolute top-[45%] left-0 right-0 flex flex-col items-center text-center text-white z-50 px-4">
-              <p className="sm:text-lg max-w-xl mx-auto mb-8 bg-white text-black px-4 py-2 rounded-md font-medium">
+              <p className="sm:bg-white bg-white/80 text-black px-4 py-2 rounded-md font-medium max-w-xl mx-auto mb-8 border border-gray-200 sm:border-none">
   We specialize in
   <span className="text-purple-500 font-semibold"> small businesses </span>
   consulting services.
