@@ -34,12 +34,12 @@ export default function Home() {
       />
 
       <div className="relative flex flex-col items-center justify-center text-center px-2 sm:py-8 py-12">
-        {/* Global Background */}
+        {/* Background */}
         <div className="absolute inset-0 -z-10 h-full w-full dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2]">
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         </div>
 
-        {/* Image Slider */}
+        {/* ✅ Image Slider */}
         <div className="relative w-full h-[85vh] mb-12 overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-3xl">
           <ImagesSlider
             images={[
@@ -52,28 +52,33 @@ export default function Home() {
             autoplay={true}
             direction="up"
             overlay={false}
-            overlayClassName="bg-gradient-to-t from-black via-transparent to-black rounded-2xl"
           >
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-50">
-              <h1 className="text-4xl font-semi-bold mb-4 sm:text-7xl lg:text-8xl">
-                <span className="text-purple-500 text-bold">Reliable</span> Consulting Services
+            {/* Header */}
+            <div className="absolute top-[15%] left-0 right-0 flex flex-col items-center text-center text-white z-50 px-4">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold drop-shadow-[0_1.5px_3px_rgba(0,0,0,0.7)]">
+                <span className="text-purple-500">Reliable</span> Consulting Services
               </h1>
-              <p className="mb-8 sm:text-lg max-w-[800px]">
-                We specialize in
-                <span className="text-purple-500"> small businesses </span>
-                consulting services
-              </p>
-              <div className="flex flex-row items-center gap-5">
+            </div>
+
+            {/* Subtext + Buttons */}
+            <div className="absolute top-[45%] left-0 right-0 flex flex-col items-center text-center text-white z-50 px-4">
+              <p className="sm:text-lg max-w-xl mx-auto mb-8 bg-white text-black px-4 py-2 rounded-md font-medium">
+  We specialize in
+  <span className="text-purple-500 font-semibold"> small businesses </span>
+  consulting services.
+</p>
+
+              <div className="flex flex-wrap justify-center gap-4">
                 <Link
-                  href={`/HR_Consulting`}
-                  className="px-6 bg-purple-500 text-white hover:bg-purple-600 flex items-center gap-2 rounded-lg py-3"
+                  href="/HR_Consulting"
+                  className="px-6 bg-purple-500 text-white hover:bg-purple-600 flex items-center gap-2 rounded-lg py-3 font-medium drop-shadow"
                 >
                   <FaPeopleGroup className="text-2xl" />
                   HR Consulting
                 </Link>
                 <Link
                   href="/Bookkeeping"
-                  className="px-6 bg-white text-black hover:bg-gray-200 flex items-center gap-2 rounded-lg py-3"
+                  className="px-6 bg-white text-black hover:bg-gray-200 flex items-center gap-2 rounded-lg py-3 font-medium drop-shadow"
                 >
                   <Image
                     src="/qb.svg"
