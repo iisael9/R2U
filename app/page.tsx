@@ -19,7 +19,7 @@ import { ImagesSlider } from "@/components/ui/images-slider";
 export default function Home() {
   return (
     <>
-      {/* ✅ JSON-LD Logo Structured Data for Google */}
+      {/* JSON-LD Logo Structured Data for Google */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -39,7 +39,15 @@ export default function Home() {
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         </div>
 
-        {/* ✅ Image Slider */}
+        {/* Heading Above Slider - No Background */}
+        <div className="w-full py-8">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-snug text-center">
+            <span className="text-purple-500 block md:inline">Reliable</span>{" "}
+            <span className="text-gray-700 dark:text-gray-200 block md:inline">Consulting Services</span>
+          </h1>
+        </div>
+
+        {/* Image Slider */}
         <div className="relative w-full h-[85vh] mb-12 overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-3xl">
           <ImagesSlider
             images={[
@@ -53,20 +61,13 @@ export default function Home() {
             direction="up"
             overlay={false}
           >
-            {/* Header */}
-            <div className="absolute top-[15%] left-0 right-0 flex flex-col items-center text-center text-white z-50 px-4">
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold drop-shadow-[0_1.5px_3px_rgba(0,0,0,0.7)]">
-                <span className="text-purple-500">Reliable</span> Consulting Services
-              </h1>
-            </div>
-
-            {/* Subtext + Buttons */}
-            <div className="absolute top-[45%] left-0 right-0 flex flex-col items-center text-center text-white z-50 px-4">
+            {/* Subtext + Buttons - Moved Lower */}
+            <div className="absolute top-[60%] left-0 right-0 flex flex-col items-center text-center text-white z-50 px-4">
               <p className="sm:bg-white bg-white/80 text-black px-4 py-2 rounded-md font-medium max-w-xl mx-auto mb-8 border border-gray-200 sm:border-none">
-  We specialize in
-  <span className="text-purple-500 font-semibold"> small businesses </span>
-  consulting services.
-</p>
+                We specialize in
+                <span className="text-purple-500 font-semibold"> small businesses </span>
+                consulting services.
+              </p>
 
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
