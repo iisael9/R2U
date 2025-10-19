@@ -43,7 +43,7 @@ export default function Home() {
         <div className="w-full py-8">
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-snug text-center">
             <span className="text-purple-500 block md:inline">Reliable</span>{" "}
-            <span className="text-gray-700 dark:text-gray-200 block md:inline">Book keeping Services</span>
+            <span className="text-gray-700 dark:text-gray-200 block md:inline">Bookkeeping Services</span>
           </h1>
         </div>
 
