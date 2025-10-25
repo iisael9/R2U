@@ -39,12 +39,17 @@ export default function Home() {
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         </div>
 
-        {/* Heading Above Slider - No Background */}
+        {/* Heading Above Slider */}
         <div className="w-full py-8">
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-snug text-center">
             <span className="text-purple-500 block md:inline">Reliable</span>{" "}
             <span className="text-gray-700 dark:text-gray-200 block md:inline">Bookkeeping Services</span>
           </h1>
+
+          {/* New Subtext Line */}
+          <p className="text-base sm:text-lg mt-2 text-gray-600 dark:text-gray-300">
+            Unmatched <span className="text-purple-500 font-semibold">affordable</span> pricing
+          </p>
         </div>
 
         {/* Image Slider */}
