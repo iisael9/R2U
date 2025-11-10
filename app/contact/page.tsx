@@ -49,7 +49,7 @@ export default function ContactPage() {
               Call Us
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
-              (951) 201-8353
+              (626) 734-2190
             </p>
             <p className="font-semibold text-gray-800 dark:text-gray-100">
               Phone Hours:

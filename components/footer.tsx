@@ -12,8 +12,8 @@ export function Footer() {
           <h4 className="text-lg font-semibold">Contact Information</h4>
           <p className="text-muted-foreground text-sm">
             Montebello, CA 90640 <br />
-            <Link href="tel:9512018353" className="text-purple-500 hover:underline">
-              (951) 201-8353
+            <Link href="tel:6267342190" className="text-purple-500 hover:underline">
+              (626) 734-2190
             </Link> <br />
             <Link href="mailto:ramonanoel27@gmail.com" className="text-purple-500 hover:underline">
               ramonanoel27@gmail.com
@@ -90,7 +90,7 @@ export function FooterButtons() {
         Montebello, CA 90640
       </Link>
       <Link
-        href="tel:9515335344"
+        href="tel:6267342190"
         className={buttonVariants({ variant: "outline", size: "sm" })}
       >
         <Phone className="h-4 w-4 mr-2 text-purple-600 fill-current" />
