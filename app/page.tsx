@@ -144,7 +144,7 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <MdOutlineSupportAgent className="text-purple-500 text-4xl mb-4" />
             <h3 className="text-lg font-bold mb-2">Dedicated Support</h3>
-            <p className="text-sm text-muted-foreground">We're here every step of the way.</p>
+            <p className="text-sm text-muted-foreground">We&apos;re here every step of the way.</p>
           </div>
 
         </div>
