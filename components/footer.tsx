@@ -66,7 +66,7 @@ export function FooterButtons() {
         Facebook
       </Link>
       <Link
-        href="https://www.instagram.com/"
+        href="https://www.instagram.com/r2u_consulting/"
         target="_blank"
         rel="noopener noreferrer"
         className={buttonVariants({ variant: "outline", size: "sm" })}
