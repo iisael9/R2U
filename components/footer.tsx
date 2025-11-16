@@ -15,8 +15,8 @@ export function Footer() {
             <Link href="tel:6267342190" className="text-purple-500 hover:underline">
               (626) 734-2190
             </Link> <br />
-            <Link href="mailto:ramonanoel27@gmail.com" className="text-purple-500 hover:underline">
-              ramonanoel27@gmail.com
+            <Link href="mailto:R2Uconsultant@gmail.com" className="text-purple-500 hover:underline">
+              R2Uconsultant@gmail.com
             </Link>
           </p>
         </div>
@@ -96,7 +96,7 @@ export function FooterButtons() {
         <Phone className="h-4 w-4 mr-2 text-purple-600 fill-current" />
         Call Us
       </Link>
-      
+
     </>
   );
 }

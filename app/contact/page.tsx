@@ -74,10 +74,10 @@ export default function ContactPage() {
               Submit an email, and we will get back to you as soon as possible.
             </p>
             <a
-              href="mailto:ramonanoel27@gmail.com"
+              href="mailto:R2Uconsultant@gmail.com"
               className="text-purple-500 hover:underline dark:text-purple-400 text-lg"
             >
-              ramonanoel27@gmail.com
+              R2Uconsultant@gmail.com
             </a>
             <p className="font-semibold text-gray-800 dark:text-gray-100 mt-6">
               Email Hours:
