@@ -11,15 +11,17 @@ export const metadata = {
 
 import Link from "next/link";
 import Image from "next/image";
+
+// Icons
 import { FaPeopleGroup } from "react-icons/fa6";
 import { MdVerified, MdOutlineSupportAgent } from "react-icons/md";
-import { HiOutlineLightningBolt } from "react-icons/hi";
+import { HiOutlineLightningBolt, HiOutlineDatabase, HiOutlineDocumentText } from "react-icons/hi";
 import { ImagesSlider } from "@/components/ui/images-slider";
 
 export default function Home() {
   return (
     <>
-      {/* JSON-LD Logo Structured Data for Google */}
+      {/* JSON-LD Logo Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -35,18 +37,18 @@ export default function Home() {
 
       <div className="relative flex flex-col items-center justify-center text-center px-2 sm:py-8 py-12">
         {/* Background */}
-        <div className="absolute inset-0 -z-10 h-full w-full dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2]">
-          <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-        </div>
+        <div className="absolute inset-0 -z-10 h-full w-full dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2]" />
 
         {/* Heading Above Slider */}
         <div className="w-full py-8">
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-snug text-center">
             <span className="text-purple-500 block md:inline">Reliable</span>{" "}
-            <span className="text-gray-700 dark:text-gray-200 block md:inline">Bookkeeping Services</span>
+            <span className="text-gray-700 dark:text-gray-200 block md:inline">
+              Bookkeeping Services
+            </span>
           </h1>
 
-          {/* New Subtext Line */}
+          {/* Subtext Line */}
           <p className="text-base sm:text-lg mt-2 text-gray-600 dark:text-gray-300">
             Unmatched <span className="text-purple-500 font-semibold">affordable</span> pricing
           </p>
@@ -56,26 +58,30 @@ export default function Home() {
         <div className="relative w-full h-[85vh] mb-12 overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-3xl">
           <ImagesSlider
             images={[
-              // "https://images.pexels.com/photos/4476375/pexels-photo-4476375.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
               "https://images.pexels.com/photos/6894103/pexels-photo-6894103.jpeg",
-              "https://images.pexels.com/photos/8962452/pexels-photo-8962452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+              "https://images.pexels.com/photos/8962452/pexels-photo-8962452.jpeg",
               "https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg",
-              "https://images.pexels.com/photos/1109543/pexels-photo-1109543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-              "https://images.pexels.com/photos/313690/pexels-photo-313690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+              "https://images.pexels.com/photos/1109543/pexels-photo-1109543.jpeg",
+              "https://images.pexels.com/photos/313690/pexels-photo-313690.jpeg",
             ]}
             autoplay={true}
             direction="up"
             overlay={false}
           >
-            {/* Subtext + Buttons - Moved Lower */}
-            <div className="absolute top-[60%] left-0 right-0 flex flex-col items-center text-center text-white z-50 px-4">
+
+            {/* Subtext + Buttons - RAISED HIGHER */}
+            <div className="absolute top-[48%] left-0 right-0 flex flex-col items-center text-center text-white z-50 px-4">
+
               <p className="sm:bg-white bg-white/80 text-black px-4 py-2 rounded-md font-medium max-w-xl mx-auto mb-8 border border-gray-200 sm:border-none">
                 We specialize in
                 <span className="text-purple-500 font-semibold"> small businesses </span>
                 consulting services.
               </p>
 
+              {/* BUTTONS */}
               <div className="flex flex-wrap justify-center gap-4">
+
+                {/* HR Consulting */}
                 <Link
                   href="/HR_Consulting"
                   className="px-6 bg-purple-500 text-white hover:bg-purple-600 flex items-center gap-2 rounded-lg py-3 font-medium drop-shadow"
@@ -83,18 +89,32 @@ export default function Home() {
                   <FaPeopleGroup className="text-2xl" />
                   HR Consulting
                 </Link>
+
+                {/* Bookkeeping */}
                 <Link
                   href="/Bookkeeping"
                   className="px-6 bg-white text-black hover:bg-gray-200 flex items-center gap-2 rounded-lg py-3 font-medium drop-shadow"
                 >
-                  <Image
-                    src="/qb.svg"
-                    alt="QuickBooks Logo"
-                    width={30}
-                    height={30}
-                  />
-                  Book Keeping Services
+                  <Image src="/qb.svg" alt="QuickBooks Logo" width={30} height={30} />
+                  Bookkeeping
                 </Link>
+
+                {/* Oracle NetSuite - Disabled */}
+                <div
+                  className="px-6 bg-purple-500 text-white flex items-center gap-2 rounded-lg py-3 font-medium drop-shadow opacity-90 cursor-default"
+                >
+                  <HiOutlineDatabase className="text-2xl" />
+                  Oracle NetSuite
+                </div>
+
+                {/* SAP - Disabled + New Icon */}
+                <div
+                  className="px-6 bg-white text-black flex items-center gap-2 rounded-lg py-3 font-medium drop-shadow opacity-90 cursor-default"
+                >
+                  <HiOutlineDocumentText className="text-2xl" />
+                  SAP
+                </div>
+
               </div>
             </div>
           </ImagesSlider>
@@ -105,34 +125,35 @@ export default function Home() {
 
         {/* Features */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl mx-auto mt-12 text-center">
+
+          {/* Feature 1 */}
           <div className="flex flex-col items-center">
             <MdVerified className="text-purple-500 text-4xl mb-4" />
             <h3 className="text-lg font-bold mb-2">Trusted Expertise</h3>
-            <p className="text-sm text-muted-foreground">
-              Our team is backed by experience and client trust.
-            </p>
+            <p className="text-sm text-muted-foreground">Backed by real experience.</p>
           </div>
+
+          {/* Feature 2 */}
           <div className="flex flex-col items-center">
             <HiOutlineLightningBolt className="text-purple-500 text-4xl mb-4" />
             <h3 className="text-lg font-bold mb-2">Efficient Solutions</h3>
-            <p className="text-sm text-muted-foreground">
-              We deliver fast, tailored solutions to meet your unique needs.
-            </p>
+            <p className="text-sm text-muted-foreground">Fast & tailored support.</p>
           </div>
+
+          {/* Feature 3 */}
           <div className="flex flex-col items-center">
             <MdOutlineSupportAgent className="text-purple-500 text-4xl mb-4" />
             <h3 className="text-lg font-bold mb-2">Dedicated Support</h3>
-            <p className="text-sm text-muted-foreground">
-              Our support team is here to assist you every step of the way.
-            </p>
+            <p className="text-sm text-muted-foreground">We're here every step of the way.</p>
           </div>
+
         </div>
 
         {/* Divider */}
         <div className="w-full h-[2px] bg-gradient-to-r from-purple-500 via-transparent to-purple-500 my-32"></div>
 
         {/* CTA */}
-        <div className="mt-0 text-center">
+        <div className="text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to get started?</h2>
           <p className="text-muted-foreground mb-6">
             Let us help you streamline your operations and grow your business.
@@ -143,6 +164,7 @@ export default function Home() {
             </button>
           </Link>
         </div>
+
       </div>
     </>
   );
